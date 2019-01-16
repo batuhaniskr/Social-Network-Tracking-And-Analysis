@@ -55,6 +55,14 @@ A project written in Python to twitter tracking and analysis without using Twitt
 
 </ul>
 
+<ul>
+  <li>If you want you can run the application on the docker. </li>
+  <br>
+  <pre>docker build . -t twitter-intelligence</pre>
+  <br>
+  <pre>docker run -it -p 5000:5000 --rm -v "images:/usr/src/app/images" twitter-intelligence</pre>
+ </ul>
+
 ## Analysis
 
  analysis.py performs analysis processing. User, hashtag and location analyzes are performed.
@@ -86,5 +94,8 @@ You must write Google Map Api Key in setting.py to display google map.
 <pre>python3 analysis.py --user</pre>
 
 ## Graphical User Interface
-
+ If you want run gui application, you should change "#PyQt5==5.11.2" to "PyQt5==5.11.2" in requirements.txt and you can run the that command.
+ <pre>pip3 install -r requirements.txt</pre>
+ 
  socialgui.py used for gui application
+ 
